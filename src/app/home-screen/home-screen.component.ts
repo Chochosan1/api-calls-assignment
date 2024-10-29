@@ -1,6 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NasaService } from '../services/nasa-service.service';
-import { tap } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -15,4 +14,5 @@ import { MatCardModule } from '@angular/material/card';
 export class HomeScreenComponent {
   private nasaService: NasaService = inject(NasaService);
   protected picOfTheDay$ = this.nasaService.getPicOfTheDay$();
+  protected marsPhoto$ = this.nasaService.getRoverCuriosityPic$();
 }

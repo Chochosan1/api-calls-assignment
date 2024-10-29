@@ -13,5 +13,15 @@
         <p>{{ picData.explanation }}</p>
       </mat-card-content>
     </mat-card>
+
+    <mat-card *ngIf="marsPhoto$ | async as marsData" class="pic-card">
+        <mat-card-header>
+          <mat-card-title>Earth date: {{ marsData.photos[0].earth_date }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="marsData.photos[0].img_src" alt="Mars Photo">
+        <mat-card-content>
+          <p>Photo id: {{ marsData.photos[0].id }}</p>
+        </mat-card-content>
+      </mat-card>
   </div>
   
