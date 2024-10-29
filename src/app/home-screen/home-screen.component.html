@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="header">
+    <span>Astronomy Picture of the Day</span>
+  </mat-toolbar>
+  
+  <div class="container-main">
+    <mat-card *ngIf="picOfTheDay$ | async as picData" class="pic-card">
+      <mat-card-header>
+        <mat-card-title>{{ picData.title }}</mat-card-title>
+        <mat-card-subtitle>{{ picData.date }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="picData.url" alt="Astronomy Picture of the Day" *ngIf="picData.media_type === 'image'">
+      <mat-card-content>
+        <p>{{ picData.explanation }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

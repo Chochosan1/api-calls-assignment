@@ -1,0 +1,29 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: white;
+  }
+  
+  .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: grey;
+  }
+  
+  .nav-links button {
+    margin-right: 12px;
+    color: rgb(12, 12, 12);
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  @media (max-width: 600px) {
+    .nav-links {
+      display: none;
+    }
+  }
+  
